@@ -1,0 +1,349 @@
+/**
+ * Nicholas Whitford
+ * Nov 28, 2021
+ * Styles for Nickreads
+ */
+
+ /**
+ *
+ * 1. Global Styles
+ * 2. Navbar
+ * 3. Footer
+ * 4. Forms
+ * 5. Table
+ * 6. index.php
+ * 7. booksPage.php
+ * 8. accountPage.php
+ * 9. signupPage.php
+ *
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+ /****************************** 1. Global Styles ******************************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #5c5c5c;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  max-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 768px;
+  margin: auto;
+  background-color: #333;
+}
+
+.hide {
+  display: none;
+}
+
+.result-message {
+  min-height: 2rem;
+  padding-top: 0.5rem;
+  max-width: 340px;
+  margin: auto;
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+color: #02cf02;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-light-grey {
+  color: #828282;
+}
+
+.text-black {
+  color: #333;
+}
+
+.logo {
+  font-weight: 100;
+}
+
+/****************************** 2. Navbar ******************************/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.75rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 1rem;
+  padding: 0.25rem 0.75rem;
+  transition: all 0.5s ease-in;
+}
+
+nav a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+
+/****************************** 3. Footer ******************************/
+footer {
+  text-align: center;
+  padding: 0.75rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s ease-in;
+}
+
+footer a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/****************************** 4. Forms ******************************/
+form {
+  margin-top: 3rem;
+}
+
+form input {
+  display: block;
+  width: 340px;
+  padding: 9px 13px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 0.75rem;
+}
+
+form label {
+  font-weight: 200;
+}
+
+button {
+  width: 100%;
+  border-radius: 8px;
+  background: #ea4c89;
+  border: #ea4c89;
+  padding: 10px 16px;
+  color: #ffff;
+  font-size: 16px;
+  margin-top: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #f082ac;
+}
+
+button#delete-book-button {
+  background: #1CA0F0;
+  border: #1CA0F0;
+}
+
+button#delete-book-button:hover {
+  background: #61bcf3;
+}
+
+button#cancel-book-button {
+  background: #0bed96;
+  border: #4ceaad;
+}
+
+button#cancel-book-button:hover {
+  background: #4ceaad;
+}
+
+
+input:not([type="checkbox"]) {
+    -webkit-appearance: none;
+    padding: 0.5rem;
+    border: 2px solid #999;
+  }
+
+input:not([type="checkbox"]):focus {
+  outline: 1px solid lightblue;
+  background: #fffe;
+}
+
+.checkbox-container {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-container input {
+  margin: 0 1rem;
+}
+
+.checkbox-container input[type="checkbox"] {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  -webkit-appearance: none;
+  background-color: #fff;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.checkbox-container input[type="checkbox"]:before {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 20px;
+  top: 4px;
+  left: 5px;
+  background-color: #ea4c89;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.checkbox-container input:checked[type="checkbox"]:before {
+  left: 42px;
+}
+
+.checkbox-container span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+/****************************** 5. Table ******************************/
+table {
+  width: 100%;
+  background-color: #EBEAE9;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table img {
+  max-width: 20px;
+  cursor: pointer;
+}
+
+tr th:nth-child(1) {
+  width: 43%;
+}
+
+tr th:nth-child(2) {
+  width: 30%;
+}
+
+tr th:nth-child(3) {
+  width: 17%;
+}
+
+tr th:nth-child(4) {
+  width: 10%;
+}
+
+/* 356, 232, 115 */
+/* 50, 33, 17 */
+
+td, th {
+  padding: 0.25rem 0.75rem;
+  text-align: center;
+}
+
+table tr:nth-child(odd) {
+    background: #f083ac36;
+}
+
+/****************************** 6. index.php ******************************/
+.sub-text {
+  margin: 3rem auto 3rem;
+  margin-top: 3rem;
+  max-width: 540px;
+}
+
+
+/****************************** 7. books.php ******************************/
+header#books-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+main#books-main {
+  min-height: initial;
+  max-height: initial;
+}
+
+/****************************** 8. accountPage.php ******************************/
+main#account-page {
+  min-height: initial;
+  max-height: initial;
+}
+
+/****************************** 9. signupPage.php ******************************/
+.show-password {
+  text-align: right;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+
+@media screen and (max-width: 442px) {
+  nav a {
+    padding: 0.25rem 0;
+  }
+}
